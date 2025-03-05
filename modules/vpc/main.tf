@@ -2,7 +2,7 @@ resource "aws_vpc" "main" {
   cidr_block = var.vpc_cidr
   count      = var.existing_vpc_id == null ? 1 : 0 # Create VPC only if existing_vpc_id is null
     tags = {
-    Name = "crypto-pipeline-vpc" # Replace with your desired name
+    Name = "crypto-pipeline-vpc" 
   }
 }
 
@@ -18,10 +18,10 @@ locals {
 resource "aws_subnet" "private" {
   count             = 2
   vpc_id            = local.vpc_id
-  cidr_block        = cidrsubnet(var.vpc_cidr, 3, count.index * 3) # Changed to 3
+  cidr_block        = cidrsubnet(var.vpc_cidr, 3, count.index * 3) 
   availability_zone = data.aws_availability_zones.available.names[count.index]
   tags = {
-    Name = "crypto-private-subnet-${count.index + 1}" # Replace with desired naming pattern
+    Name = "crypto-private-subnet-${count.index + 1}" 
   }
 }
 

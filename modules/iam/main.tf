@@ -1,5 +1,3 @@
-# modules/iam/main.tf
-
 resource "aws_iam_role" "lambda_role" {
   name = "lambda-role"
 
@@ -21,7 +19,7 @@ EOF
 
 resource "aws_iam_policy" "lambda_policy" {
   name        = "lambda-policy"
-  description = "Policy for Lambda function to access RDS and CloudWatch Logs"
+  description = "Policy for Lambda function to access RDS, CloudWatch Logs, and API Gateway"
 
   policy = <<EOF
 {
@@ -51,7 +49,14 @@ resource "aws_iam_policy" "lambda_policy" {
         "ec2:DescribeNetworkInterfaces",
         "ec2:DeleteNetworkInterface"
       ],
-      "Resource": "*" 
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "execute-api:Invoke"
+      ],
+      "Resource": "arn:aws:execute-api:${var.aws_region}:${var.account_id}:${var.api_gateway_id}/*/*/*"
     }
   ]
 }

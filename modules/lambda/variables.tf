@@ -40,3 +40,8 @@ variable "lambda_function_name" {
   type        = string
   description = "Name of the Lambda function"
 }
+
+variable "api_gateway_execution_arn" {
+  type        = string
+  description = "The execution ARN of the API Gateway."
+}

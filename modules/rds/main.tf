@@ -18,12 +18,8 @@ resource "aws_db_instance" "rds_instance" {
   vpc_security_group_ids = var.security_group_ids
   db_subnet_group_name   = aws_db_subnet_group.rds_subnet_group.name
   db_name                = var.db_name
-  identifier             = "crypto-rds-instance" # Added identifier
-  # Optional configurations for production:
-  # multi_az                  = true
-  # storage_autoscaling_enabled = true
-  # backup_retention_period   = 7 # Days
-  # monitoring_interval       = 60 # Seconds
+  identifier             = "crypto-rds-instance" 
+ 
 }
 
 output "db_identifier" {

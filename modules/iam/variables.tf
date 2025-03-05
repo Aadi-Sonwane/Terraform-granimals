@@ -19,3 +19,10 @@ variable "lambda_function_name" {
   type        = string
   description = "Lambda function name"
 }
+
+
+variable "api_gateway_id" {
+  type        = string
+  description = "The ID of the API Gateway."
+}
+

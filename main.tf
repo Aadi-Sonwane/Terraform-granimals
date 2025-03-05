@@ -11,6 +11,7 @@ module "iam" {
   account_id             = var.account_id
   db_instance_identifier = module.rds.db_identifier
   lambda_function_name   = var.lambda_function_name
+  api_gateway_id = module.api_gateway.api_gateway_id
 }
 module "rds" {
   source              = "./modules/rds"
@@ -33,7 +34,9 @@ module "lambda" {
   subnet_ids           = module.vpc.private_subnet_ids
   security_group_ids   = [module.vpc.lambda_sg_id]
   lambda_function_name = var.lambda_function_name
+  api_gateway_execution_arn = module.api_gateway.api_gateway_execution_arn
 }
+
 
 module "api_gateway" {
   source               = "./modules/api_gateway"
