@@ -13,15 +13,13 @@ The architecture consists of the following components:
 - **IAM Roles and Policies:** IAM roles and policies for secure access to AWS resources.
 
 ## Screenshots
-
-![Screenshot 1]("https://asset.cloudinary.com/dw6mhkdfm/1ee9fd3ad04e43db2d5a42aa04acd2a8")
-![Screenshot 2](https://asset.cloudinary.com/dw6mhkdfm/958453c4508199c2fe55bbd20f86b8b8)
-![Screenshot 3](https://asset.cloudinary.com/dw6mhkdfm/e13c07e20e5dbd109328fff44d04f4e5)
-![Screenshot 4](https://asset.cloudinary.com/dw6mhkdfm/481013ddc6a1d50a203f5a45776801ed)
-![Screenshot 5](https://asset.cloudinary.com/dw6mhkdfm/532cea50c719fd47607e6edaec30d4ae)
-![Screenshot 6](https://asset.cloudinary.com/dw6mhkdfm/144b1dc7da89fc0170a0e70f9626f8ce)
-
-
+![Terraform deploy](https://res.cloudinary.com/dw6mhkdfm/image/upload/v1741183924/final_url_tcdsbo.png)
+![Terraform deploy](https://res.cloudinary.com/dw6mhkdfm/image/upload/v1741183924/terraform_apply_lqgxtg.png)
+![Terraform deploy](https://res.cloudinary.com/dw6mhkdfm/image/upload/v1741183924/vpc_created_pwo6j9.png)
+![Terraform deploy](https://res.cloudinary.com/dw6mhkdfm/image/upload/v1741183924/subnets_yolngi.png)
+![Terraform deploy](https://res.cloudinary.com/dw6mhkdfm/image/upload/v1741183923/rds_dduetz.png)
+![Terraform deploy](https://res.cloudinary.com/dw6mhkdfm/image/upload/v1741183923/lambda_wxy2aa.png)
+![Terraform deploy](https://res.cloudinary.com/dw6mhkdfm/image/upload/v1741183923/final_output_cqd0d5.png)
 
 ## Prerequisites
 
@@ -68,7 +66,7 @@ terraform-crypto-pipeline/
 1. **Clone the repository:**
 
     ```bash
-    git clone <repository_url>
+    git clone [<repository_url>](https://github.com/Aadi-Sonwane/Terraform-granimals.git)
     cd terraform-crypto-pipeline
     ```
 
